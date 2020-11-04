@@ -1,0 +1,12 @@
+[0327/094817.462:ERROR:crash_report_database_win.cc(428)] unexpected header
+[0327/130026.737:ERROR:crash_report_database_win.cc(428)] unexpected header
+[0329/101800.191:ERROR:crash_report_database_win.cc(428)] unexpected header
+[0331/125341.519:ERROR:crash_report_database_win.cc(428)] unexpected header
+[0402/130838.069:ERROR:crash_report_database_win.cc(428)] unexpected header
+[0404/102217.904:ERROR:crash_report_database_win.cc(428)] unexpected header
+[0409/130004.348:ERROR:crash_report_database_win.cc(428)] unexpected header
+[0409/131620.399:ERROR:crash_report_database_win.cc(428)] unexpected header
+[0417/211742.904:ERROR:crash_report_database_win.cc(428)] unexpected header
+[0419/140042.350:ERROR:crash_report_database_win.cc(428)] unexpected header
+[1120/124814.961:ERROR:process_info.cc(359)] UncheckedAllocate
+[1022/231739.015:ERROR:directory_reader_win.cc(43)] FindFirstFile: El sistema no puede encontrar la ruta especificada. (0x3)

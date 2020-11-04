@@ -1,0 +1,80 @@
+/*
+    Componente PContacto.js
+*/
+
+.grillaContacto-grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: ". ." ". .";
+}
+.datos-grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "icono titulo" "icono dato";
+  color: #722789;
+}
+.contacLlamada {
+  color: #722789;
+  i {
+    font-size: 50px;
+    padding-top: 10px;
+    position: absolute;
+  }
+  padding-top: 10px;
+  h4 {
+    padding-left: 70px;
+  }
+  h5 {
+    a {
+      color: #5C7080;
+      line-height: 1.9rem;
+      font-weight: 600;
+
+    }
+  }
+}
+.contacRedes{
+  color: #722789;
+  padding-left: 150px;
+  i {
+    font-size: 40px;
+    position: absolute;
+  }
+  padding-top: 10px;
+  h4 {
+    padding-left: 70px;
+  }
+  h5 {
+    a {
+      color: #5C7080;
+      line-height: 1.9rem;
+      font-weight: 600;
+      padding-left: 50px;
+      padding-top: 50px;
+    }
+  }
+  .iconRedes{
+    i{
+      font-size: 30px;
+    }
+  }
+}
+.posicionContacto{
+  padding-left: 150px 
+}
+
+@media only screen and (max-width: 880px) {
+  .grillaContacto-grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "." "." "." ".";
+  }
+
+  .posicionContacto{
+    padding-left: 0px 
+  }
+
+}

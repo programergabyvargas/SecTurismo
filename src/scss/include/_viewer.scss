@@ -1,0 +1,101 @@
+/*
+    Class Viewer
+*/
+
+@mixin FlexCenterView() {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+$btn-bg-color: $color-dos;
+$btn-fore-color: white;
+$btn-active-bg-color: $color-uno;
+$btn-active-fore-color: white;
+//$item-width: 300px;
+
+.Viewer {
+  display: grid;
+  grid-template-areas: "btn-left items btn-right" "pages pages pages";
+  grid-template-columns: 25px 1fr 25px;
+  grid-gap: 10px;
+  .btn-left {
+    grid-area: btn-left;
+  }
+  .items {
+    grid-area: items;
+    /*
+        display: grid;
+        grid-template-columns: repeat(auto-fill, $item-width);
+        grid-gap: 10px;
+        justify-content: center;
+        */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .btn-right {
+    grid-area: btn-right;
+  }
+  .pages {
+    grid-area: pages;
+    ul {
+      list-style-type: none;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      margin-block-start: 0;
+      margin-block-end: 0;
+      padding-inline-start: 0;
+      li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0.2em;
+        padding: 2px;
+        min-width: 30px;
+        -webkit-border-radius: 2px;
+        border-radius: 2px;
+        background-color: $btn-bg-color;
+        color: $btn-fore-color;
+        cursor: pointer;
+        transition: all 1.5s;
+        &.selected {
+          background-color: $btn-active-bg-color;
+          color: $btn-active-fore-color;
+        }
+      }
+    }
+  }
+  .btn-left,
+  .btn-right,
+  .pages {
+    @include FlexCenterView();
+  }
+  .btn-left,
+  .btn-right {
+    cursor: pointer;
+  }
+}
+
+//Eliminar
+.City {
+  display: flex;
+  height: 300px;
+  width: 300px;
+  margin: 5px;
+  justify-content: center;
+  align-items: center;
+  background-color: grey;
+  p {
+    text-align: center;
+    color: #fff;
+  }
+}

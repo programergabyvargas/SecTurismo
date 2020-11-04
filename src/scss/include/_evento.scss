@@ -1,0 +1,27 @@
+/*
+    Componente PEvento.js
+*/
+
+.evento-titulo {
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 36px;
+    color: #fff;
+}
+
+.evento-descripcion {
+    color: #fff;
+    font-weight: 300;
+    font-size: 1.3rem;
+}
+
+.evento-data {
+    li {
+        list-style-type: none;
+        color: #fff;
+        margin-bottom: 5px;
+        i {
+            color: $color-uno;
+        }
+    }
+}

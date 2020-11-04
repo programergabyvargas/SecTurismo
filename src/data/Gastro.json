@@ -1,0 +1,25 @@
+[
+    {
+        "idLocalidad": 12,
+        "localidad": "Merlo",
+        "tipo": "Restoran",
+        "nombre": "El Sol Restaurant",
+        "domicilio": "Av. del Sol 314",
+        "descripcion": "Bla Bla Bla",
+        "latitud": 0,
+        "longitud": 0,
+        "telefono": "269 33415",
+        "mail": "",
+        "web": "",
+        "fotos": ["default.jpg", "default.jpg", "default.jpg"],
+        "horarios": {
+            "lunes": "cerrado",
+            "martes": "cerrado",
+            "miercoles": "cerrado",
+            "jueves": "cerrado",
+            "viernes": "cerrado",
+            "sabado": "cerrado",
+            "domingo": "cerrado"
+        }
+    }
+]

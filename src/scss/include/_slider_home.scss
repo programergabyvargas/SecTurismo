@@ -1,0 +1,341 @@
+/*
+    Slider Home
+*/
+//MODAL INICIO 
+.close {
+  position: absolute;
+  right: 32px;
+  top: 32px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
+}
+.close:hover {
+  opacity: 1;
+}
+.close:before, .close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 33px;
+  width: 2px;
+  background-color: #333;
+}
+.close:before {
+  transform: rotate(45deg);
+}
+.close:after {
+  transform: rotate(-45deg);
+}
+
+
+
+
+
+
+//FIN MODAL INICIO
+// CAMPEONATO PESCA
+.placasCoronavirus {
+  height: 600px;
+}
+//Slider
+.carouselExampleIndicators {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.carouselExampleIndicators,
+.carousel-inner,
+.carousel-item,
+.img-slider {
+  height: 100vh;
+}
+
+.img-slider {
+  object-fit: contain;
+}
+
+.img-slider-1 {
+  @include img-slider;
+  background-image: url(http://turismo.sanluis.gov.ar/api-turismo/public/recursos/carousel/PRIMAVERA3.jpg);
+  background-repeat: no-repeat;
+  //background-position: 0 0 50px 0;
+  //background-size: cover;
+}
+
+.img-slider-2 {
+  @include img-slider;
+  background-image: url(http://turismo.sanluis.gov.ar/api-turismo/public/recursos/carousel/PRIMAVERA2.jpg);
+  background-repeat: no-repeat;
+  background-position: 0 0 50px 0;
+  background-size: cover;
+}
+
+.img-slider-3 {
+  @include img-slider;
+  background-image: url(http://turismo.sanluis.gov.ar/api-turismo/public/recursos/carousel/PRIMAVERA1.jpg);
+  background-repeat: no-repeat;
+  background-position: 0 0 50px 0;
+  background-size: cover;
+}
+
+.img-slider-4 {
+  @include img-slider;
+  background-image: url(http://turismo.sanluis.gov.ar/api-turismo/public/recursos/carousel/4.jpg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+}
+
+.img-slider-5 {
+  @include img-slider;
+  background-image: url(http://turismo.sanluis.gov.ar/api-turismo/public/recursos/carousel/5.jpg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+}
+
+.img-slider-6 {
+  @include img-slider;
+  background-image: url(http://turismo.sanluis.gov.ar/api-turismo/public/recursos/carousel/6.jpg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+}
+
+.img-slider-7 {
+  @include img-slider;
+  background-image: url(http://turismo.sanluis.gov.ar/api-turismo/public/recursos/carousel/7.jpg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+}
+.img-slider-8 {
+  @include img-slider;
+  background-image: url(http://turismo.sanluis.gov.ar/api-turismo/public/recursos/carousel/8.jpg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+}
+.img-slider-9 {
+  @include img-slider;
+  background-image: url(http://turismo.sanluis.gov.ar/api-turismo/public/recursos/carousel/9.jpg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+}
+.img-slider-10 {
+  @include img-slider;
+  background-image: url(http://turismo.sanluis.gov.ar/api-turismo/public/recursos/carousel/10.jpg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+}
+.img-slider-11 {
+  @include img-slider;
+  background-image: url(http://turismo.sanluis.gov.ar/api-turismo/public/recursos/carousel/11.jpg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+}
+.tituloCarrusel {
+  position: absolute;
+  bottom: 10vh;
+  left: 5vw;
+  width: 450px;
+  height: 190px;
+}
+.tituloCarrusel2 {
+  position: absolute;
+  bottom: 5vh;
+  left: 15vw;
+  width: 250px;
+  height: 35px;
+}
+.tituloCarrusel3 {
+  position: absolute;
+  bottom: 5vh;
+  left: 12vw;
+  width: 300px;
+  height: 35px;
+}
+.tituloCarrusel4 {
+  display: none;
+}
+.slider-home-leyenda {
+  position: absolute;
+  bottom: 4px;
+  left: 12rem;
+  display: none;
+  h1 {
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 700;
+    text-shadow: 1px 1px 1px #3d3d3d;
+    font-size: 3em;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    margin: 0px;
+    padding: 0px;
+    vertical-align: bottom;
+    line-height: 2rem;
+  }
+  span {
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 700;
+    text-shadow: 1px 1px 1px #3d3d3d;
+    font-size: 3em;
+  }
+}
+.imagenHome {
+  position: absolute;
+  bottom: 12vh;
+  right: 5vw;
+  img {
+    width: 350px;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  .placasCoronavirus {
+    height: 400px;
+  }
+
+  .imagenHome {
+    position: absolute;
+    bottom: 40%;
+    left: 20%;
+    img {
+      width: 500px;
+    }
+  }
+  .slider-home-leyenda {
+    left: 4rem;
+  }
+
+  .campeonatoPesca {
+    height: 120px;
+    .titulo {
+      padding-left: 50px;
+      padding-top: 30px;
+    }
+    .botones {
+      float: none;
+      margin-top: -25px;
+      margin-left: 50px;
+    }
+  }
+  .pngPesca1 {
+    position: absolute;
+    bottom: 2vh;
+    width: 150px;
+    height: 30px;
+  }
+  .pngPesca2 {
+    position: absolute;
+    bottom: 2vh;
+    right: 5px;
+    width: 250px;
+    height: 50px;
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  .placasCoronavirus {
+    height: 300px;
+  }
+
+  .campeonatoPesca {
+    height: 130px;
+    top: -50px;
+    .titulo {
+      font-size: 23px;
+      padding-left: 30px;
+      padding-top: 10px;
+    }
+    .botones {
+      float: none;
+      margin-top: 10px;
+      margin-left: 30px;
+    }
+    .boton1 {
+      margin-right: 10px;
+      margin-left: 50px;
+    }
+  }
+
+  .imagenHome {
+    position: absolute;
+    bottom: 45%;
+    left: 17%;
+    img {
+      width: 250px;
+    }
+  }
+  .slider-home-leyenda {
+    //display: none !important;
+    h1 {
+      font-size: 1.5rem;
+      line-height: 1.5rem;
+    }
+    span {
+      font-size: 1.5rem;
+    }
+  }
+  .tituloCarrusel {
+    position: absolute;
+    bottom: 15vh;
+    left: 15vw;
+    width: 230px;
+    height: 130px;
+  }
+  .tituloCarrusel2 {
+    position: absolute;
+    bottom: 12vh;
+    left: 30vw;
+    width: 130px;
+    height: 20px;
+  }
+  .tituloCarrusel3 {
+    position: absolute;
+    bottom: 9vh;
+    left: 5%;
+    width: 250px;
+    height: 16px;
+  }
+  .img-slider-1 {
+    @include img-slider;
+    background-image: url(http://turismo.sanluis.gov.ar/api-turismo/public/recursos/carousel/port_vulpiani.jpg);
+    background-repeat: no-repeat;
+    background-position: 0 0 50px 0;
+    background-size: cover;
+  }
+
+  .img-slider-2 {
+    @include img-slider;
+    background-image: url(http://turismo.sanluis.gov.ar/api-turismo/public/recursos/carousel/port_potrero.jpg);
+    background-repeat: no-repeat;
+    background-position: 0 0 50px 0;
+    background-size: cover;
+  }
+
+  .img-slider-3 {
+    @include img-slider;
+    background-image: url(http://turismo.sanluis.gov.ar/api-turismo/public/recursos/carousel/port_estancia.jpg);
+    background-repeat: no-repeat;
+    background-position: 0 0 50px 0;
+    background-size: cover;
+  }
+
+  .tituloCarrusel4 {
+    display: inline;
+    position: absolute;
+    width: 250px;
+    height: 170px;
+    bottom: 30vh;
+    left: 25vw;
+  }
+}

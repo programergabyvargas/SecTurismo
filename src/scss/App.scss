@@ -1,0 +1,128 @@
+//sass --watch src/scss/App.scss:src/App.css
+
+@import "include/config";
+@import "include/colors";
+@import "include/mixins";
+@import "include/init";
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+//Class Viewer
+@import "include/viewer";
+
+//Componente Menu.js
+@import "include/menu";
+
+//Sub Componente ZonaMenu
+@import "include/zonas_menu";
+
+//Slider Home
+@import "include/slider_home";
+
+//Componente Recorridos.js
+@import "include/recorridos";
+//Componente Descarga.js
+@import "include/descarga";
+//Componente EventoForm.js
+@import "include/eventoform";
+//Componente PEventos.js
+@import "include/eventos";
+//Componente PEvento.js
+@import "include/evento";
+//Componente PNovedad.js
+@import "include/novedad";
+//Componente Novedades.js
+@import "include/novedades";
+//Componente Novedadesfull.js
+@import "include/novedadesfull";
+//Componente PZona.js
+@import "include/zonadetalles";
+//Componente PLocalidad.js
+@import "include/localidaddetalles";
+//Componente PAtractivo.js
+@import "include/atractivo";
+//Componente PListadoAtractivos
+@import "include/listadoatractivos";
+//Componente Alojamientos
+@import "include/alojamientos";
+//Componente PAlojamiento
+@import "include/alojamiento";
+//Componente PContacto
+@import "include/contacto";
+
+@import "include/home";
+
+//Componente Footer.js
+@import "include/footer";
+
+a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 880px) {
+  .menu {
+    padding: 0 1rem;
+    ul {
+      li {
+        a {
+          margin-right: 10px;
+        }
+      }
+    }
+    .logo {
+      img {
+        width: 180px;
+      }
+    }
+  }
+
+  .menu-leyenda {
+    position: absolute;
+    bottom: 5rem;
+    left: 12rem;
+
+    h1 {
+      font-size: 3em;
+    }
+    span {
+      font-size: 3em;
+      //margin-top: -20px;
+    }
+  }
+}
+
+.div-zona {
+  max-width: 360px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  .div-zona-img {
+    width: 128px;
+    height: 128px;
+  }
+  .div-zona-title {
+  }
+}
+
+.archivosApp {
+  h4 {
+    margin: 15px;
+  }
+  img {
+    width: 80%;
+    height: 12%;
+  }
+}
+
+@media only screen and (max-width: 880px) {
+  .archivosApp {
+    h4 {
+      margin: 15px;
+    }
+    img {
+      width: 100%;
+    }
+  }
+}

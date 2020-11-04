@@ -1,0 +1,60 @@
+/*
+    Componente Footer.js
+*/
+
+.Footer {
+    padding: 20px 40px;
+    width: 100%;
+    background-color:rgba(114,39,137, 1);
+    @include degrado2(0.95, 0.8);
+    display: grid;
+    grid-template-areas: "logom ministerio social institucional";
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    justify-items: center;
+    align-items: center;
+    .logom { //Si le pones logo no funciona no se porqué ??? !Ver
+        grid-area: logom;
+        img {
+            max-width: 200px;
+        }
+    }
+    .ministerio {
+        grid-area: ministerio;  
+        text-align: center;
+        h3{color:#fff;}
+        p {
+            color:#fff;
+            @include resetP();
+            a {
+                text-decoration: none;
+                color: #fff;
+            }
+        }
+    }
+    .social {
+        grid-area: social;
+        text-align: center;
+        h3{color:#fff;}
+        i{color:#fff;}
+        p {
+            @include resetP();
+            a {
+                text-decoration: none;
+                color: #fff;
+            }
+        }
+    }
+    .institucional {
+        grid-area: institucional;
+    }
+}
+
+@media only screen and (max-width: 920px) {
+    .Footer {
+        grid-template-areas: "logom" "ministerio" "social" "institucional";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-row-gap: 20px !important;
+    }
+}

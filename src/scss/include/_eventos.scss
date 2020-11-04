@@ -1,0 +1,139 @@
+/*
+    Componente PEventos.js
+*/
+
+.single-card {
+    min-height: 250px;
+    background: #ddd;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #98BE13;
+  top: 0;
+  left: 0;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 25px;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+}
+
+.single-card:hover .overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+.overlay h4 {
+    font-size: 18px;
+    font-weight: 200;
+    margin-bottom: 5px;
+}
+
+.overlay h3 {
+    font-size: 36px;
+    font-weight: 600;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+    margin-bottom: 0;
+}
+
+.overlay h2 {
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 5px;
+}
+
+.overlay a {
+    color: #fff;
+    font-size: 24px;
+    display: block;
+    text-align: right;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+
+.card-content h2 {
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 26px;
+    padding: 0 15px;
+    text-shadow: 1px 2px 5px rgba(0,0,0,0.5);
+}
+
+.card-content h3 {
+    font-size: 24px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 300;
+    background: #000;
+    padding: 5px 15px;
+    margin: 0;
+}
+
+.single-card {
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 25px;
+    position: relative;
+    z-index: 1;
+    margin-top: 30px;
+}
+
+.card-bg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #ccc;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    background-color: #4B125C;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.card-bg:after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: .7;
+  z-index: -2;
+  background: -moz-linear-gradient(left, rgba(115,13,126,0.65) 0%, rgba(197,1,105,0.25) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, rgba(115,13,126,0.65) 0%,rgba(197,1,105,0.25) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, rgba(115,13,126,0.65) 0%,rgba(197,1,105,0.25) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6730d7e', endColorstr='#40c50169',GradientType=1 ); /* IE6-9 */
+}
+
+.cbg-1{ background-image: url("https://source.unsplash.com/random/640x480"); }
+.cbg-2{ background-image: url("https://source.unsplash.com/random/640x480"); }
+.cbg-3{ background-image: url("https://source.unsplash.com/random/640x480"); }
+.cbg-4{ background-image: url("https://source.unsplash.com/random/640x480"); }
+.cbg-5{ background-image: url("https://source.unsplash.com/random/640x480"); }
+.cbg-6{ background-image: url("https://source.unsplash.com/random/640x480"); }
+.cbg-7{ background-image: url("https://source.unsplash.com/random/640x480"); }
+
+h3.bgc_1 {
+    background: #E76114;
+}
+
+h3.bgc_2 {
+    background: #458EC9;
+}
+
+h3.bgc_3 {
+    background: #00652E;
+}
+
+h3.bgc_4 {
+    background: #F6B63E;
+}

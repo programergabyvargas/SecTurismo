@@ -1,0 +1,117 @@
+/*
+    Componente Novedades.js
+*/
+
+.Novedades {
+  margin: 0;
+  padding: 0;
+  border: none;
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  grid-template-rows: minmax(190px, auto);
+  //grid-gap: 0px;
+  .novedades-leyenda {
+    position: relative;
+    //overflow: hidden;
+    //min-height: 300px;
+    cursor: pointer;
+    .background-bar {
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100%;
+      background-color: #F1C40F;
+     // @include degrado2(0.95,1.09);
+      width: 60px;
+      display: block;
+    }
+    .texto {
+      position: absolute;
+      left: 0;
+      top: 10px;
+      background-color: #fff;
+      color: #722789;
+      display: flex;
+      flex-direction: column;
+      padding: 5px 10px;
+      ul {
+        margin: 0;
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        margin-block-start: 0px;
+        margin-block-end: 0px;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        padding-inline-start: 0px;
+        li {
+          text-align: end;
+          text-transform: uppercase;
+          font-size: 2rem;
+          line-height: 2rem;
+          font-weight: 800;
+          i {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+  .novedades-body {
+    margin-left: -1px;
+    padding: 10px;
+    background-color: $color-dos;
+    @include degrado2(0.95, 0.8);
+    color: #fff;
+    .img-fluid {
+      border: 2px solid #fff;
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+    }
+    i {
+      font-size: 2rem;
+      color: #fff;
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .Novedades {
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px auto;
+    .novedades-leyenda {
+      .background-bar {
+        position: absolute;
+        left: 0;
+        top: 20px;
+        width: 100%;
+        height: 30px;
+      }
+      .texto {
+        left: 10px;
+        top: 0px;
+        ul {
+          flex-direction: row;
+          li {
+            text-align: center;
+            i {
+              margin-left: 10px;
+              transform: rotate(90deg);
+            }
+          }
+        }
+      }
+    }
+    .novedades-body {
+      margin-left: 0px;
+      text-align: center;
+      .img-fluid {
+        border: 2px solid #fff;
+        width: auto;
+        height: auto;
+        object-fit: cover;
+      }
+    }
+  }
+}

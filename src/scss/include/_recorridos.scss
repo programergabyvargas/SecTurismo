@@ -1,0 +1,434 @@
+/*
+    Componente Recorridos.js
+*/
+
+.Recorridos {
+  position: relative;
+  //zona CReer
+  .titulo-creer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 700px;
+    .reco-t-sub1 {
+      font-size: 3em;
+      color: $color-uno;
+      text-transform: capitalize;
+      font-weight: 600;
+    }
+    .reco-t-sub2 {
+      font-size: 2em;
+      padding: 2px 15px;
+      background-color: $color-uno;
+      color: #fff;
+      text-transform: uppercase;
+    }
+  }
+  .mancha-sup-izq {
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url($server_path+"imgs/SUP-IZQ.png");
+    background-repeat: no-repeat;
+  }
+  .mancha-sup-der {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    width: 300px;
+    height: 400px;
+    background-image: url($server_path+"imgs/SUP-DER.png");
+    background-repeat: no-repeat;
+  }
+  .mancha-inf-izq {
+    bottom: 0;
+    position: absolute;
+    width: 400px;
+    height: 230px;
+    margin-bottom: -40px;
+    background-image: url($server_path+"imgs/INF-IZQ.png");
+    background-repeat: no-repeat;
+  }
+  .mancha-inf-der {
+    position: absolute;
+    bottom: 0;
+    right: 0px;
+    width: 400px;
+    height: 230px;
+    margin-bottom: -40px;
+    background-image: url($server_path+"imgs/INF-DER.png");
+    background-repeat: no-repeat;
+  }
+  .reco-leyenda {
+    padding-left: 40px;
+    padding-right: 40px;
+    text-align: justify; /* For Edge */
+    -moz-text-align-last: justify; /* For Firefox prior 58.0 */
+    text-align-last: justify;
+    max-width: 800px;
+    margin: 20px 0 0 auto;
+    .reco-l-sub1,
+    .reco-l-sub2 {
+      text-align: right;
+      text-transform: uppercase;
+      color: #fff;
+      text-shadow: 1px 1px 1px #000000;
+      font-size: 3rem;
+      margin-bottom: 0px;
+      line-height: 3rem;
+    }
+    .reco-l-sub2 {
+      letter-spacing: -1px;
+    }
+  }
+  .reco-titulo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    .reco-t-sub1 {
+      font-size: 3em;
+      color: $color-uno;
+      text-transform: capitalize;
+      font-weight: 600;
+    }
+    .reco-t-sub2 {
+      font-size: 2em;
+      padding: 2px 15px;
+      background-color: $color-uno;
+      color: #fff;
+      text-transform: uppercase;
+    }
+  }
+  .reco-container {
+    margin: 40px auto;
+    max-width: 1024px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 240px);
+    //grid-auto-flow: column;
+    //grid-auto-columns: minmax(200px, 1fr);
+    grid-gap: 20px;
+    widows: 100%;
+    //justify-items: center;
+    align-content: space-between;
+    justify-content: space-around;
+
+    //grid-auto-flow: column;
+    #sierras {
+      //grid-area: sierras;
+      @include reco-zona();
+      .cuadro-color {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: (100% - 5%);
+        display: block;
+        background-color: #cb6120;
+        width: 40%;
+      }
+      img {
+        position: absolute;
+        top: 5px;
+        left: 10px;
+        z-index: 2;
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+      }
+      .cuadro-titulo {
+        position: absolute;
+        bottom: 0;
+        left: 45%;
+        z-index: 3;
+        color: #cb6120;
+        font-size: 1.5em;
+        font-weight: 600;
+        p {
+          margin-bottom: 0px;
+        }
+      }
+    }
+    #norte {
+      //grid-area: norte;
+      @include reco-zona();
+      .cuadro-color {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 35%;
+        display: block;
+        background-color: #a2bd31;
+        width: 100%;
+      }
+      img {
+        position: absolute;
+        top: 1%;
+        right: 10px;
+        z-index: 2;
+        width: 200px;
+        height: 200px;
+      }
+      .cuadro-titulo {
+        position: absolute;
+        bottom: 0;
+        left: 30px;
+        z-index: 3;
+        color: #a2bd31;
+        font-size: 1.5em;
+        font-weight: 600;
+        p {
+          margin-bottom: 0px;
+        }
+      }
+    }
+    #costa {
+      //grid-area: costa;
+      @include reco-zona();
+      .cuadro-color {
+        position: absolute;
+        top: 100px;
+        left: 0;
+        height: 35%;
+        display: block;
+        background-color: #326534;
+        width: 100%;
+      }
+      img {
+        position: absolute;
+        top: 0;
+        left: 10px;
+        z-index: 2;
+        width: 200px;
+        height: 200px;
+      }
+      .cuadro-titulo {
+        position: absolute;
+        bottom: 0;
+        left: 15px;
+        z-index: 3;
+        color: #326534;
+        font-size: 1.5em;
+        font-weight: 600;
+        p {
+          margin-bottom: 0px;
+        }
+      }
+    }
+    #valle {
+      //grid-area: valle;
+      @include reco-zona();
+      .cuadro-color {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 80%;
+        display: block;
+        background-color: #bf3276;
+        width: 35%;
+      }
+      img {
+        position: absolute;
+        top: 1%;
+        left: 0;
+        z-index: 2;
+        width: 200px;
+        height: 200px;
+      }
+      .cuadro-titulo {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 3;
+        color: #bf3276;
+        font-size: 1.5em;
+        font-weight: 600;
+        p {
+          margin-bottom: 0px;
+        }
+      }
+    }
+    #villa {
+      //grid-area: villa;
+      @include reco-zona();
+      .cuadro-color {
+        position: absolute;
+        top: 40%;
+        right: 0;
+        height: 105px;
+        display: block;
+        background-color: #e5b449;
+        width: 100%;
+      }
+      img {
+        position: absolute;
+        top: 1%;
+        left: 5%;
+        z-index: 2;
+        width: 200px;
+        height: 200px;
+      }
+      .cuadro-titulo {
+        position: absolute;
+        bottom: 0;
+        left: 5%;
+        z-index: 3;
+        color: #e5b449;
+        font-size: 1.5em;
+        font-weight: 600;
+        p {
+          margin-bottom: 0px;
+        }
+      }
+    }
+    #huellas {
+      //grid-area: huella;
+      @include reco-zona();
+      .cuadro-color {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 85%;
+        display: block;
+        background-color: #a01127;
+        width: 45%;
+      }
+      img {
+        position: absolute;
+        top: 3%;
+        left: 0;
+        z-index: 2;
+        width: 200px;
+        height: 200px;
+      }
+      .cuadro-titulo {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 3;
+        color: #a01127;
+        font-size: 1.5em;
+        font-weight: 600;
+        p {
+          margin-bottom: 0px;
+        }
+      }
+    }
+    #llanura {
+      //grid-area: llanura;
+      @include reco-zona();
+      .cuadro-color {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 35%;
+        display: block;
+        background-color: #618dc5;
+        width: 100%;
+      }
+      img {
+        position: absolute;
+        top: 2%;
+        left: 2%;
+        z-index: 2;
+        width: 200px;
+        height: 200px;
+      }
+      .cuadro-titulo {
+        position: absolute;
+        bottom: 0;
+        left: 2%;
+        z-index: 3;
+        color: #618dc5;
+        font-size: 1.5em;
+        font-weight: 600;
+        p {
+          margin-bottom: 0px;
+        }
+      }
+    }
+    #termas {
+      //grid-area: termas;
+      @include reco-zona();
+      .cuadro-color {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 90%;
+        display: block;
+        background-color: #5ea099;
+        width: 35%;
+      }
+      img {
+        position: absolute;
+        top: 3%;
+        left: 10%;
+        z-index: 2;
+        width: 200px;
+        height: 200px;
+      }
+      .cuadro-titulo {
+        position: absolute;
+        bottom: 0;
+        left: 38%;
+        z-index: 3;
+        color: #5ea099;
+        font-size: 1.5em;
+        font-weight: 600;
+        p {
+          margin-bottom: 0px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 790px) {
+  .Recorridos {
+    .mancha-inf-der {
+      display: none;
+    }
+    .mancha-sup-izq {
+      display: none;
+    }
+    .reco-leyenda {
+      text-align: right;
+      -moz-text-align-last: none; /* For Firefox prior 58.0 */
+      text-align-last: none;
+      max-width: 600px;
+      .reco-l-sub1,
+      .reco-l-sub2 {
+        font-size: 2.1rem;
+        line-height: 2.4rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 580px) {
+  .Recorridos {
+    .titulo-creer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 300px;
+    }
+    .mancha-inf-izq {
+      height: 190px;
+    }
+    .reco-leyenda {
+      text-align: center;
+      -moz-text-align-last: center;
+      text-align-last: center;
+      max-width: 580px;
+      .reco-l-sub1,
+      .reco-l-sub2 {
+        font-size: 1.1rem;
+        line-height: 1.4rem;
+      }
+    }
+  }
+}

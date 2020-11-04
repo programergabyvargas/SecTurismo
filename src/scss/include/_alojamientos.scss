@@ -1,0 +1,129 @@
+/*
+    Componente Alojamientos.js
+*/
+
+$card-width: 200px;
+$card-height: 300px;
+
+@mixin nombre {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    //height: 70px;
+    display: block;
+    //background-color: $color-uno;
+    @include degrado(.95, .8);
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    z-index: 999;
+    //mix-blend-mode: darken;
+    text-shadow: 1px 1px 1px #000;
+}
+
+/*
+.alojamientos-container {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    //background-color: brown;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, $card-width);
+    //grid-auto-rows: 400px;
+    grid-auto-rows: auto;
+    justify-content: center;
+    grid-gap: 20px;
+*/
+    
+    .alo-card {
+        width: $card-width;
+        height: $card-height;
+        position: relative;
+        -webkit-box-shadow: 1px 1px 10px 1px #000000;
+        box-shadow: 1px 1px 10px 1px #000000;
+        &:hover {
+            .img-box {
+                transform: translateY(-100%) rotateX(90deg);
+            }
+            .details {
+                transform: translateY(0) rotateX(0deg);
+            }
+        }
+        .img-box {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform-origin: bottom;
+            transition: .5s;
+            transform: translateY(0) rotateX(0deg);
+            .img-content {
+                position: relative;
+                //width: 100%;
+                //height: 100%;
+                img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: $card-width;
+                    height: $card-height;
+                    object-fit: cover;
+                }
+                .nombre {
+                    @include nombre;
+                }
+            }
+        }
+        .details {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #262626;
+            transform-origin: top;
+            transition: .5s;
+            box-sizing: border-box;
+            transform: translateY(100%) rotateX(-90deg);
+            .content {
+                .nombre {
+                    @include nombre;
+                }
+                .detalles {
+                    margin-top: 60px;
+                    padding-left: 3px;
+                    li {
+                        list-style-type: none;
+                        color: #fff;
+                        text-align: center;
+                        p {
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            margin-bottom: 4px;
+                            a {
+                                text-decoration: none;
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+                .vermas {
+                    position: absolute;
+                    bottom: 4px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    color: #fff;
+                    font-size: 1.4rem;
+                    cursor: pointer;
+                    text-align: center;
+                }
+            }
+        }
+    }
+/*
+}
+*/
